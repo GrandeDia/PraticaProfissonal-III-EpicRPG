@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0UbbNykjOp+RXWLYDVWH+pJ7uKM+/35eGVW15s8Md0KK3b49iw2X1JfJ4iln7Os5QgcDyuo/Su/l2SLEHBUJqA==",
+  "dgSpecHash": "znThsEUFHYIS8n06KXeSUmholOdmzIp35dPjkAReojKNVeDP7gZuZYzPCSLwrQNciMO0YicV+kQNY5qN3hnh/g==",
   "success": true,
-  "projectFilePath": "d:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
+  "projectFilePath": "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mateu\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

@@ -60,6 +60,5 @@ namespace ProjetoEpicRPGAPI.Data
             // aqui efetivamente ocorre o SELECT no BD
             return await consultaHerois.FirstOrDefaultAsync();
         }
-
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {}
+    "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {}
   },
   "projects": {
-    "d:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {
+    "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
+        "projectUniqueName": "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
         "projectName": "ProjetoEpicRPGAPI",
-        "projectPath": "d:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
+        "projectPath": "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
         "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
-        "outputPath": "d:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\obj\\",
+        "outputPath": "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
