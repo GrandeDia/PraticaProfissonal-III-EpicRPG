@@ -1,18 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
+
 using System;
 using System.Collections.Generic;
-using EpicRPG_API.Models;
+using ProjetoEpicRPGAPI.Models;
+using ProjetoEpicRPGAPI.Data;
 
-namespace EpicRPG_API.Controllers
+namespace ProjetoEpicRPGAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController()]
     public class HeroiController : Controller
     {
         public IRepository Repo{get;}
-        public HeroiController(params)
+        public HeroiController(IRepository repo)
         {
-
+            this.Repo = repo;
         }
 
         [HttpGet]
@@ -43,7 +45,7 @@ namespace EpicRPG_API.Controllers
         [HttpDelete("{idHeroi}")]
         public IActionResult delete(int idHeroi)
         {
-        return Ok();
+            return Ok();
         }
     }
 }

@@ -1,10 +1,14 @@
-//using Microsoft.EntityFrameworkCore;
-using EpicRPG_API.Models;
+using Microsoft.EntityFrameworkCore;
+using ProjetoEpicRPGAPI.Models;
 
-namespace EpicRPG_API.Data
+namespace ProjetoEpicRPGAPI.Data
 {
     public class DungeonContext : DbContext
     {
-        
+        public DungeonContext(DbContextOptions<DungeonContext> options) : base(options)
+        {
+
+        }
+        public DbSet<Heroi> Herois {get; set;}
     }
 }

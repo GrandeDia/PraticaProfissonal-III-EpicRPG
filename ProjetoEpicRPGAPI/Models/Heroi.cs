@@ -1,4 +1,4 @@
-namespace EpicRPG_API.Models
+namespace ProjetoEpicRPGAPI.Models
 {
     public class Heroi
     {

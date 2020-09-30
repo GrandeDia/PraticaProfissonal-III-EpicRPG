@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
-using EpicRPG_API.Models;
+using ProjetoEpicRPGAPI.Models;
 
-namespace ProjetoEscola_API.Data
+namespace ProjetoEpicRPGAPI.Data
 {
     public interface IRepository
     {
@@ -13,6 +13,6 @@ namespace ProjetoEscola_API.Data
 
         //Métodos GET, que não são genéricos, pois possuem algo específico, no caso, Aluno!
         Task<Heroi[]> GetAllHeroisAsync();
-        Task<Heroi> GetAllHeroisAsyncByRa(string RA);
+        Task<Heroi> GetAllHeroisAsyncByRa(int RA);
     }
 }

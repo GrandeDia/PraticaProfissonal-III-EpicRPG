@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+using Microsoft.EntityFrameworkCore;
+using ProjetoEpicRPGAPI.Data;
+
 namespace ProjetoEpicRPGAPI
 {
     public class Startup
@@ -25,7 +28,12 @@ namespace ProjetoEpicRPGAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DungeonContext>
+            (
+                x => x.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"))
+            );
             services.AddControllers();
+            services.AddScoped<IRepository, Repository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,7 +44,7 @@ namespace ProjetoEpicRPGAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 

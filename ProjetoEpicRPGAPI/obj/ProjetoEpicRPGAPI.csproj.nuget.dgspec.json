@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {}
+    "d:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {}
   },
   "projects": {
-    "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {
+    "d:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
+        "projectUniqueName": "d:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
         "projectName": "ProjetoEpicRPGAPI",
-        "projectPath": "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
+        "projectPath": "d:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
         "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
-        "outputPath": "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\ProjetoEpicRPGAPI\\obj\\",
+        "outputPath": "d:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -40,6 +40,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
