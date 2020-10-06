@@ -18,6 +18,6 @@ namespace ProjetoEpicRPGAPI.Data
             modelBuilder.Ignore<Usuario>();
         }*/
         public DbSet<Heroi> Herois {get; set;}
-        //public DbSet<Usuario> Usuarios {get; set;}
+        public DbSet<Usuario> Usuarios {get; set;}
     }
 }

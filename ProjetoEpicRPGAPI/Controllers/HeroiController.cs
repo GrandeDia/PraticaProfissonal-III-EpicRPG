@@ -50,6 +50,12 @@ namespace ProjetoEpicRPGAPI.Controllers
             return Ok();
         }
 
+        [HttpGet("u/{idUsuario}")]
+        public IActionResult GetHeroisU(int codUsuario)
+        {
+            var result = this.Repo.GetHeroisDoUsuario(codUsuario);
+            return Ok(result);
+        }
     }
 }
 

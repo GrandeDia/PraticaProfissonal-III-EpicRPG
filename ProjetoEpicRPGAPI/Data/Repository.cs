@@ -46,20 +46,55 @@ namespace ProjetoEpicRPGAPI.Data
             //throw new System.NotImplementedException();
             //Retornar para uma query qualquer do tipo Heroi
             IQueryable<Heroi> consultaHerois = this.Context.Herois;
+            consultaHerois = consultaHerois.OrderBy(h => h.IdHeroi);
             return consultaHerois.ToArray();
-            consultaHerois = consultaHerois.OrderBy(a => a.IdHeroi);
+            
             // aqui efetivamente ocorre o SELECT no BD
-            return await consultaHerois.ToArrayAsync();
+            //return await consultaHerois.ToArrayAsync();
         }
 
-        public async Task<Heroi> GetAllHeroisAsyncById(int IdHeroi)
+        public Heroi[] GetAllHeroisAsyncById(int IdHeroi)
         {
             //throw new System.NotImplementedException();
             //Retornar para uma query qualquer do tipo Heroi
             IQueryable<Heroi> consultaHerois = this.Context.Herois;
-            consultaHerois = consultaHerois.OrderBy(a => a.IdHeroi).Where(Heroi => Heroi.IdHeroi == IdHeroi);
+            consultaHerois = consultaHerois.OrderBy(h => h.IdHeroi).Where(Heroi => Heroi.IdHeroi == IdHeroi);
+            return consultaHerois.ToArray();
             // aqui efetivamente ocorre o SELECT no BD
-            return await consultaHerois.FirstOrDefaultAsync();
+            //return await consultaHerois.FirstOrDefaultAsync();
+        }
+
+        public async Task<Usuario[]> GetAllUsuarios()
+        {
+            IQueryable<Usuario> consultaUsuarios = this.Context.Usuarios;
+            consultaUsuarios = consultaUsuarios.OrderBy(u => u.cod_usuario);
+            return consultaUsuarios.ToArray();
+        }
+
+        public Usuario[] GetUsuarioById(int cod)
+        {
+            IQueryable<Usuario> consultaUsuarios = this.Context.Usuarios;
+            consultaUsuarios = consultaUsuarios.Where(Usuario => Usuario.cod_usuario == cod);
+            return consultaUsuarios.ToArray();
+        }
+
+        public Usuario[] GetCodigoUsuario(string email, string senha)
+        {
+            System.Console.WriteLine(email);
+            System.Console.WriteLine(senha);
+            IQueryable<Usuario> consultaUsuario = this.Context.Usuarios;
+            consultaUsuario = consultaUsuario
+            .Where(u => u.email.Equals(email))
+            .Where(u => u.senha.Equals(senha));
+
+            return consultaUsuario.ToArray();
+        }
+
+        public Heroi[] GetHeroisDoUsuario(int cod_usuario)
+        {
+            IQueryable<Heroi> consultaHerois = this.Context.Herois;
+            consultaHerois = consultaHerois.Where(h => h.cod_usuario == cod_usuario);
+            return consultaHerois.ToArray();
         }
     }
 }
