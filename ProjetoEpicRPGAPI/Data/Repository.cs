@@ -44,17 +44,18 @@ namespace ProjetoEpicRPGAPI.Data
         public async Task<Heroi[]> GetAllHeroisAsync()
         {
             //throw new System.NotImplementedException();
-            //Retornar para uma query qualquer do tipo Aluno
+            //Retornar para uma query qualquer do tipo Heroi
             IQueryable<Heroi> consultaHerois = this.Context.Herois;
+            return consultaHerois.ToArray();
             consultaHerois = consultaHerois.OrderBy(a => a.IdHeroi);
             // aqui efetivamente ocorre o SELECT no BD
             return await consultaHerois.ToArrayAsync();
         }
 
-        public async Task<Heroi> GetAllHeroisAsyncByRa(int IdHeroi)
+        public async Task<Heroi> GetAllHeroisAsyncById(int IdHeroi)
         {
             //throw new System.NotImplementedException();
-            //Retornar para uma query qualquer do tipo Aluno
+            //Retornar para uma query qualquer do tipo Heroi
             IQueryable<Heroi> consultaHerois = this.Context.Herois;
             consultaHerois = consultaHerois.OrderBy(a => a.IdHeroi).Where(Heroi => Heroi.IdHeroi == IdHeroi);
             // aqui efetivamente ocorre o SELECT no BD

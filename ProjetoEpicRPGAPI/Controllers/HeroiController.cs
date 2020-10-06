@@ -20,13 +20,15 @@ namespace ProjetoEpicRPGAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok();
+            var result = this.Repo.GetAllHeroisAsync();
+            return Ok(result);
         }
         
         [HttpGet("{idHeroi}")]
         public IActionResult Get(int idHeroi)
         {
-            return Ok();
+            var result = this.Repo.GetAllHeroisAsyncById(idHeroi);
+            return Ok(result);
         }
 
         [HttpPost]
@@ -47,5 +49,15 @@ namespace ProjetoEpicRPGAPI.Controllers
         {
             return Ok();
         }
+
     }
 }
+
+/*
+
+Get:    Pegar todos / unico item de uma tabela
+Post:   inserir todos / unico item para uma tabela
+Put:    Editar todos / unico dado da tabela 
+Delete: Deletar
+
+*/
