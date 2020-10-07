@@ -24,11 +24,20 @@ namespace ProjetoEpicRPGAPI.Controllers
             var result = this.Repo.GetAllUsuarios();
             return Ok(result);
         }
+
+        //Esta funcionando
         
         [HttpGet("{idUsuario}")]
         public IActionResult Get(int idUsuario)
         {
-            var result = this.Repo.GetAllHeroisAsyncById(idUsuario);
+            var result = this.Repo.GetUsuarioById(idUsuario);
+            return Ok(result);
+        }
+
+        [HttpGet("h/{idUsuario}")]
+        public IActionResult GetHerois(int idUsuario)
+        {
+            var result = this.Repo.GetHeroisDoUsuario(idUsuario);
             return Ok(result);
         }
 
@@ -36,6 +45,10 @@ namespace ProjetoEpicRPGAPI.Controllers
         public IActionResult Get(string usuario, string senha)
         {
             var result = this.Repo.GetCodigoUsuario(usuario, senha);
+            
+            result[0].email = "";
+            result[0].senha = "";
+            
             return Ok(result);
         }
     }

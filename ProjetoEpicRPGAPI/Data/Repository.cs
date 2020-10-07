@@ -84,7 +84,10 @@ namespace ProjetoEpicRPGAPI.Data
             System.Console.WriteLine(senha);
             IQueryable<Usuario> consultaUsuario = this.Context.Usuarios;
             consultaUsuario = consultaUsuario
-            .Where(u => u.email.Equals(email))
+            .Where(u => u.email.Equals(email)); //compara o email dos usuarios do banco com o email do usuario passado
+                                                //eh possivel que um usuario tenha mais de uma conta, entao comparar a 
+                                                //senha tambem eh necessario
+            consultaUsuario = consultaUsuario
             .Where(u => u.senha.Equals(senha));
 
             return consultaUsuario.ToArray();
