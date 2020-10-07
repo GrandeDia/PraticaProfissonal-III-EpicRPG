@@ -10,13 +10,7 @@ namespace ProjetoEpicRPGAPI.Data
         {
 
         }
-
-        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            //isso vai ignorar
-            modelBuilder.Ignore<Heroi>();
-            modelBuilder.Ignore<Usuario>();
-        }*/
+        
         public DbSet<Heroi> Herois {get; set;}
         public DbSet<Usuario> Usuarios {get; set;}
     }

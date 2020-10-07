@@ -47,21 +47,21 @@ namespace ProjetoEpicRPGAPI.Data
             //Retornar para uma query qualquer do tipo Heroi
             IQueryable<Heroi> consultaHerois = this.Context.Herois;
             consultaHerois = consultaHerois.OrderBy(h => h.IdHeroi);
-            return consultaHerois.ToArray();
+            return await consultaHerois.ToArrayAsync();
             
             // aqui efetivamente ocorre o SELECT no BD
             //return await consultaHerois.ToArrayAsync();
         }
 
-        public Heroi[] GetAllHeroisAsyncById(int IdHeroi)
+        public async Task<Heroi> GetHeroisAsyncById(int IdHeroi)
         {
             //throw new System.NotImplementedException();
             //Retornar para uma query qualquer do tipo Heroi
             IQueryable<Heroi> consultaHerois = this.Context.Herois;
             consultaHerois = consultaHerois.OrderBy(h => h.IdHeroi).Where(Heroi => Heroi.IdHeroi == IdHeroi);
-            return consultaHerois.ToArray();
+            return await consultaHerois.FirstOrDefaultAsync();
             // aqui efetivamente ocorre o SELECT no BD
-            //return await consultaHerois.FirstOrDefaultAsync();
+
         }
 
         public async Task<Usuario[]> GetAllUsuarios()
@@ -93,11 +93,12 @@ namespace ProjetoEpicRPGAPI.Data
             return consultaUsuario.ToArray();
         }
 
-        public Heroi[] GetHeroisDoUsuario(int cod_usuario)
+        
+        public async Task<Heroi[]> GetHeroisDoUsuario(int cod_usuario)
         {
             IQueryable<Heroi> consultaHerois = this.Context.Herois;
             consultaHerois = consultaHerois.Where(h => h.cod_usuario == cod_usuario);
-            return consultaHerois.ToArray();
+            return await consultaHerois.ToArrayAsync();
         }
     }
 }

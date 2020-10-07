@@ -18,6 +18,8 @@ namespace ProjetoEpicRPGAPI.Controllers
             this.Repo = repo;
         }
 
+        //Adaptar TUDO
+
         [HttpGet]
         public IActionResult Get()
         {
@@ -26,7 +28,6 @@ namespace ProjetoEpicRPGAPI.Controllers
         }
 
         //Esta funcionando
-        
         [HttpGet("{idUsuario}")]
         public IActionResult Get(int idUsuario)
         {
@@ -34,6 +35,7 @@ namespace ProjetoEpicRPGAPI.Controllers
             return Ok(result);
         }
 
+        //funcional
         [HttpGet("h/{idUsuario}")]
         public IActionResult GetHerois(int idUsuario)
         {
@@ -41,6 +43,7 @@ namespace ProjetoEpicRPGAPI.Controllers
             return Ok(result);
         }
 
+        //funcional
         [HttpGet("{usuario}/{senha}")]
         public IActionResult Get(string usuario, string senha)
         {

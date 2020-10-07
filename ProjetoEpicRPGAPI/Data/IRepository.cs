@@ -14,11 +14,11 @@ namespace ProjetoEpicRPGAPI.Data
         //Métodos GET, que não são genéricos, pois possuem algo específico, no caso, Aluno!
         Task<Heroi[]> GetAllHeroisAsync();
         //Task<Heroi> GetAllHeroisAsyncById(int Id);
-        Heroi[] GetAllHeroisAsyncById(int Id);
+        Task<Heroi> GetHeroisAsyncById(int Id);
 
         Task<Usuario[]> GetAllUsuarios();
         Usuario[] GetUsuarioById(int id);
         Usuario[] GetCodigoUsuario(string email, string senha);
-        public Heroi[] GetHeroisDoUsuario(int cod_usuario);
+        Task<Heroi[]> GetHeroisDoUsuario(int cod_usuario);
     }
 }
