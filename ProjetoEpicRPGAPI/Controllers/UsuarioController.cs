@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 using System;
 using System.Collections.Generic;
@@ -20,38 +22,39 @@ namespace ProjetoEpicRPGAPI.Controllers
 
         //Adaptar TUDO
 
+        //testar
         [HttpGet]
-        public IActionResult Get()
+        public  async Task<IActionResult> Get()
         {
-            var result = this.Repo.GetAllUsuarios();
+            var result = await this.Repo.GetAllUsuarios();
             return Ok(result);
         }
 
-        //Esta funcionando
+        //testar
         [HttpGet("{idUsuario}")]
-        public IActionResult Get(int idUsuario)
+        public async Task<IActionResult> Get(int idUsuario)
         {
-            var result = this.Repo.GetUsuarioById(idUsuario);
+            var result = await this.Repo.GetUsuarioById(idUsuario);
             return Ok(result);
         }
 
-        //funcional
+        //testar
         [HttpGet("h/{idUsuario}")]
-        public IActionResult GetHerois(int idUsuario)
+        public async Task<IActionResult> GetHerois(int idUsuario)
         {
-            var result = this.Repo.GetHeroisDoUsuario(idUsuario);
+            var result = await this.Repo.GetHeroisDoUsuario(idUsuario);
             return Ok(result);
         }
 
-        //funcional
+        //testar
         [HttpGet("{usuario}/{senha}")]
-        public IActionResult Get(string usuario, string senha)
+        public async Task<IActionResult> Get(string usuario, string senha)
         {
-            var result = this.Repo.GetCodigoUsuario(usuario, senha);
+            var result = await this.Repo.GetCodigoUsuario(usuario, senha);
             
             result[0].email = "";
             result[0].senha = "";
-            
+
             return Ok(result);
         }
     }

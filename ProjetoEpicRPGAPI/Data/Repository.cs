@@ -68,17 +68,17 @@ namespace ProjetoEpicRPGAPI.Data
         {
             IQueryable<Usuario> consultaUsuarios = this.Context.Usuarios;
             consultaUsuarios = consultaUsuarios.OrderBy(u => u.cod_usuario);
-            return consultaUsuarios.ToArray();
+            return await consultaUsuarios.ToArrayAsync();
         }
 
-        public Usuario[] GetUsuarioById(int cod)
+        public async Task<Usuario[]> GetUsuarioById(int cod)
         {
             IQueryable<Usuario> consultaUsuarios = this.Context.Usuarios;
             consultaUsuarios = consultaUsuarios.Where(Usuario => Usuario.cod_usuario == cod);
-            return consultaUsuarios.ToArray();
+            return await consultaUsuarios.ToArrayAsync();
         }
 
-        public Usuario[] GetCodigoUsuario(string email, string senha)
+        public async Task<Usuario[]> GetCodigoUsuario(string email, string senha)
         {
             System.Console.WriteLine(email);
             System.Console.WriteLine(senha);
@@ -90,7 +90,7 @@ namespace ProjetoEpicRPGAPI.Data
             consultaUsuario = consultaUsuario
             .Where(u => u.senha.Equals(senha));
 
-            return consultaUsuario.ToArray();
+            return await consultaUsuario.ToArrayAsync();
         }
 
         
