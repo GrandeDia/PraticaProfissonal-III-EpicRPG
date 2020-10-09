@@ -60,7 +60,7 @@ namespace ProjetoEpicRPGAPI.Controllers
 
                 if(await this.Repo.SaveChangesAsync())
                 {
-                    Console.WriteLine("Insercao concluida");
+                    Console.WriteLine("Insercao concluida de heroi");
                     
                     //ver depois
                     //return Created($"/api/Heroi/{exemplar.IdHeroi}", exemplar);
@@ -85,7 +85,7 @@ namespace ProjetoEpicRPGAPI.Controllers
                 this.Repo.Update(exemplar);
                 if(await this.Repo.SaveChangesAsync())
                 {
-                    Console.WriteLine("As alteracoes foram salvas");
+                    Console.WriteLine("As alteracoes em heroi foram salvas");
 
                     return Ok();
                     //return Created($"/api/Heroi/{exemplar.IdHeroi}" , heroi );

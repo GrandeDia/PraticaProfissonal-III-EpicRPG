@@ -17,7 +17,7 @@ namespace ProjetoEpicRPGAPI.Data
         Task<Heroi> GetHeroisAsyncById(int Id);
 
         Task<Usuario[]> GetAllUsuarios();
-        Task<Usuario[]> GetUsuarioById(int id);
+        Task<Usuario> GetUsuarioById(int id);
         Task<Usuario[]> GetCodigoUsuario(string email, string senha);
         Task<Heroi[]> GetHeroisDoUsuario(int cod_usuario);
     }

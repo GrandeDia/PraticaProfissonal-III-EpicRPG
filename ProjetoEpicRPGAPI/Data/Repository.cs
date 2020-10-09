@@ -71,11 +71,11 @@ namespace ProjetoEpicRPGAPI.Data
             return await consultaUsuarios.ToArrayAsync();
         }
 
-        public async Task<Usuario[]> GetUsuarioById(int cod)
+        public async Task<Usuario> GetUsuarioById(int cod)
         {
             IQueryable<Usuario> consultaUsuarios = this.Context.Usuarios;
             consultaUsuarios = consultaUsuarios.Where(Usuario => Usuario.cod_usuario == cod);
-            return await consultaUsuarios.ToArrayAsync();
+            return await consultaUsuarios.FirstOrDefaultAsync();
         }
 
         public async Task<Usuario[]> GetCodigoUsuario(string email, string senha)
