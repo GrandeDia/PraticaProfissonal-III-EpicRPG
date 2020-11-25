@@ -1,12 +1,16 @@
 Funcional
+(GET)
 1) http://localhost:5000/api/Usuario/
 
 Funcional
+(GET)
 2) http://localhost:5000/api/Usuario/1
 
 Funcional
+(GET)
 3) http://localhost:5000/api/Usuario/h/1
 
 4)
 
+(POST)
 5)
