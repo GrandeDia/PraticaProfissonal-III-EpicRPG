@@ -1,34 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {}
+    "C:\\Users\\Pichau\\Documents\\GitHub\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {}
   },
   "projects": {
-    "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {
+    "C:\\Users\\Pichau\\Documents\\GitHub\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Pichau\\Documents\\GitHub\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
         "projectName": "ProjetoEpicRPGAPI",
-        "projectPath": "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
-        "packagesPath": "C:\\Users\\mateu\\.nuget\\packages\\",
-        "outputPath": "D:\\4°-Semestre\\Pratica Profissional III\\EpicRPG\\API\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\obj\\",
+        "projectPath": "C:\\Users\\Pichau\\Documents\\GitHub\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\ProjetoEpicRPGAPI.csproj",
+        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pichau\\Documents\\GitHub\\PraticaProfissonal-III-EpicRPG\\ProjetoEpicRPGAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mateu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +36,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -56,6 +53,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.8, 3.1.8]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.9, 3.1.9]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -64,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
